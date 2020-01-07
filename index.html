@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "appone/base.html" %}
+<!--{% load static %}-->
+<!--<html>-->
+<!--    <head>-->
+<!--        <title> ZOMATO HOME </title>-->
+<!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+<!--        <link rel="stylesheet" href="{% static "css/style.css" %}"/>-->
+<!--    </head>-->
+<!--    <body>-->
+{% block body_block %}
+        <div class="container">
+            <div class="jumbotron">
+                <div class="text-success">
+                    <img src ="{% static "images/zom.jpg" %}" alt="oh!" align="right" width=250 height=200>
+                    <h1> <t> WELCOME TO </h1>
+                    
+                    <h1>ZOMATO PROJECT </h1><br>
+                </div>
+                
+                    <h3> Q1.1) What are the cuisines that are not present in Delhi </h3>
+                    <a href="{% url 'appone:cuisines' %}"> click here </a>
+                    <h3> Q1.2) Graph for number of restaurants in Delhi-NCR and Rest of India </h3>
+                    <a href="{% url 'appone:restaurants'  %}"> click here </a>
+                    <h3> Q1.3) Top 10 cuisines in Delhi-NCR and Rest of India </h3>
+                    <a href="{% url 'appone:top' %}"> click here </a>
+                    <h3> Q1.4) Scatter and Line graphs for Ratings by users according to Average Cost for two </h3>
+                    <a href="{% url 'appone:avg_cost' %}"> click here for complete range </a><br>
+                    <a href="{% url 'appone:avg_cost2' %}"> click here for lower range</a>
+                    <h3> Q1.5) Top 10 cuisines present in restaurants in USA </h3>
+                    <a href="{% url 'appone:pie_chart' %}"> click here </a>
+            </div>
+        </div>
+{% endblock %}
+<!--    </body>-->
+<!--</html>-->
